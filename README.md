@@ -34,12 +34,6 @@ This may also work:
 
     go get -u github.com//gvsafronov/flunix
 
-Releases and pre-built images
------------------------------
-
-See the [release](https://github.com//gvsafronov/flunix/releases/latest) page for releases for a variety of platforms and architectures.
-
-The [docker image](https://hub.docker.com/r//gvsafronov/flunix/tags) is a total of 9MB.
 
 Technologies
 ------------
