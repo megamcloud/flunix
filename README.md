@@ -1,7 +1,7 @@
 <!--
-title: Algernon
+title: flunix
 description: Web server with built-in support for Lua, Markdown, Pongo2, Amber, Sass, SCSS, GCSS, JSX, Bolt, PostgreSQL, Redis, MariaDB, MySQL, Tollbooth, Pie, Graceful, Permissions2, users and permissions
-keywords: web server, QUIC, lua, markdown, pongo2, application server, http, http2, HTTP/2, go, golang, algernon, JSX, React, BoltDB, Bolt, PostgreSQL, Redis, MariaDB, MySQL, Three.js
+keywords: web server, QUIC, lua, markdown, pongo2, application server, http, http2, HTTP/2, go, golang, flunix, JSX, React, BoltDB, Bolt, PostgreSQL, Redis, MariaDB, MySQL, Three.js
 theme: material
 -->
 
@@ -10,7 +10,7 @@ theme: material
 </p>
 <p align="center">
 
-Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38) and [Algernon](https://github.com/xyproto/algernon), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
+Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38) and [flunix](https://github.com/xyproto1/flunix), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
 
 Web server with built-in support for QUIC, HTTP/2, Lua, Markdown, Pongo2, HyperApp, Amber, Sass(SCSS), GCSS, JSX, BoltDB (built-in, stores the database in a file, like SQLite), Redis, PostgreSQL, MariaDB/MySQL, rate limiting, graceful shutdown, plugins, users and permissions.
 
@@ -19,29 +19,29 @@ All in one small self-contained executable.
 Distro Packages
 ---------------
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/algernon.svg)](https://repology.org/project/algernon/versions)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/flunix.svg)](https://repology.org/project/flunix/versions)
 
 Quick installation (development version)
 ----------------------------------------
 
 Requires Go 1.11 or later (or GCC 9.2, using `gccgo`).
 
-Clone algernon outside of `GOPATH`:
+Clone flunix outside of `GOPATH`:
 
-    git clone https://github.com/xyproto/algernon
-    cd algernon
+    git clone https://github.com//gvsafronov/flunix
+    cd flunix
     go build -mod=vendor
 
 This may also work:
 
-    go get -u github.com/xyproto/algernon
+    go get -u github.com//gvsafronov/flunix
 
 Releases and pre-built images
 -----------------------------
 
-See the [release](https://github.com/xyproto/algernon/releases/latest) page for releases for a variety of platforms and architectures.
+See the [release](https://github.com//gvsafronov/flunix/releases/latest) page for releases for a variety of platforms and architectures.
 
-The [docker image](https://hub.docker.com/r/xyproto/algernon/tags) is a total of 9MB.
+The [docker image](https://hub.docker.com/r//gvsafronov/flunix/tags) is a total of 9MB.
 
 Technologies
 ------------
@@ -66,7 +66,7 @@ Design decisions
     * data.lua is Lua code, where the functions and variables are made available for Pongo2, Amber and Markdown pages in the same directory.
     * If a single Lua script is given as a commandline argument, it will be used as a standalone server. It can be used for setting up handlers or serving files and directories for specific URL prefixes.
     * style.gcss is GCSS code that is used as the style for all Pongo2, Amber and Markdown pages in the same directory.
-* The following filename extensions are handled by Algernon:
+* The following filename extensions are handled by flunix:
     * Markdown: .md (rendered as HTML)
     * Pongo2: .po2, .pongo2 or .tpl (rendered as any text, typically HTML)
     * Amber: .amber (rendered as HTML)
@@ -86,15 +86,15 @@ Features and limitations
 * Supports HTTP/2, with or without HTTPS (browsers may require HTTPS when using HTTP/2).
 * Also supports regular HTTP.
 * Can use Lua scripts as handlers for HTTP requests.
-* The Algernon executable is compiled to native and is reasonably fast.
+* The flunix executable is compiled to native and is reasonably fast.
 * Works on Linux, OS X and 64-bit Windows.
 * The [Lua interpreter](https://github.com/yuin/gopher-lua) is compiled into the executable.
 * Live editing/preview when using the auto-refresh feature.
 * The use of Lua allows for short development cycles, where code is interpreted when the page is refreshed (or when the Lua file is modified, if using auto-refresh).
-* Self-contained Algernon applications can be zipped into an archive (ending with `.zip` or `.alg`) and be loaded at start.
+* Self-contained flunix applications can be zipped into an archive (ending with `.zip` or `.alg`) and be loaded at start.
 * Built-in support for [Markdown](https://github.com/russross/blackfriday), [Pongo2](https://github.com/flosch/pongo2), [Amber](https://github.com/eknkc/amber), [Sass](https://github.com/wellington/sass)(SCSS), [GCSS](https://github.com/yosssi/gcss) and [JSX](https://github.com/mamaar/risotto).
 * Redis is used for the database backend, by default.
-* Algernon will fall back to the built-in Bolt database if no Redis server is available.
+* flunix will fall back to the built-in Bolt database if no Redis server is available.
 * The HTML title for a rendered Markdown page can be provided by the first line specifying the title, like this: `title: Title goes here`. This is a subset of MultiMarkdown.
 * No file converters needs to run in the background (like for SASS). Files are converted on the fly.
 * If `-autorefresh` is enabled, the browser will automatically refresh pages when the source files are changed. Works for Markdown, Lua error pages and Amber (including Sass, GCSS and *data.lua*). This only works on Linux and OS X, for now. If listening for changes on too many files, the OS limit for the number of open files may be reached.
@@ -123,7 +123,7 @@ A:
 
 > Good question. I'm not sure if it excels in any scenario. There are specialized web servers that excel at caching or at raw performance. There are dedicated backends for popular front-end toolkits like Vue or React. There are dedicated editors that excel at editing and previewing Markdown, or HTML.
 >
-> I guess the main benefit is that Algernon covers a lot of ground, with a minimum of configuration, while being powerful enough to have a plugin system and support for programming in Lua. There is an auto-refresh feature that uses Server Sent Events, when editing Markdown or web pages. There is also support for the latest in Web technologies, like HTTP/2, QUIC and TLS 1.3. The caching system is decent. And the use of Go ensures that also smaller platforms like NetBSD and systems like Raspberry Pi are covered. There are no external dependencies, so Algernon can run on any system that Go can support.
+> I guess the main benefit is that flunix covers a lot of ground, with a minimum of configuration, while being powerful enough to have a plugin system and support for programming in Lua. There is an auto-refresh feature that uses Server Sent Events, when editing Markdown or web pages. There is also support for the latest in Web technologies, like HTTP/2, QUIC and TLS 1.3. The caching system is decent. And the use of Go ensures that also smaller platforms like NetBSD and systems like Raspberry Pi are covered. There are no external dependencies, so flunix can run on any system that Go can support.
 >
 > The main benefit is that is is versatile, fresh, and covers many platforms and use cases.
 >
@@ -131,7 +131,7 @@ A:
 
 Utilities
 ---------
-* Comes with the `alg2docker` utility, for creating Docker images from Algernon web applications (`.alg` files).
+* Comes with the `alg2docker` utility, for creating Docker images from flunix web applications (`.alg` files).
 * [http2check](https://github.com/xyproto/http2check) can be used for checking if a web server is offering [HTTP/2](https://tools.ietf.org/html/rfc7540).
 
 Installation
@@ -139,18 +139,18 @@ Installation
 
 ##### OS X
 
-* `brew install algernon`
+* `brew install flunix`
 * Install [Homebrew](https://brew.sh), if needed.
 
 ##### Arch Linux
 
-* Install `algernon` from AUR, using your favorite AUR helper.
+* Install `flunix` from AUR, using your favorite AUR helper.
 
 ##### Any system where go is available
 
 This method is using the latest commit from the master branch:
 
-`go get -u github.com/xyproto/algernon`
+`go get -u github.com//gvsafronov/flunix`
 
 If needed, first:
 
@@ -160,13 +160,13 @@ If needed, first:
 Overview
 --------
 
-Running Algernon:
+Running flunix:
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/algernon_gopher.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_gopher.png">
 
 Screenshot of an earlier version:
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/algernon_redis_054.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_redis_054.png">
 
 ---
 
@@ -182,7 +182,7 @@ The JSX to JavaScript (ECMAscript) transpiler is built-in.
 
 Redis is fast, scalable and offers good [data persistence](https://redis.io/topics/persistence). This should be the preferred backend.
 
-Bolt is a [pure key/value store](https://github.com/coreos/bbolt), written in Go. It makes it easy to run Algernon without having to set up a database host first.
+Bolt is a [pure key/value store](https://github.com/coreos/bbolt), written in Go. It makes it easy to run flunix without having to set up a database host first.
 MariaDB/MySQL support is included because of its widespread availability.
 
 PostgreSQL is a solid and fast database that is also supported.
@@ -190,49 +190,49 @@ PostgreSQL is a solid and fast database that is also supported.
 Screenshots
 -----------
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/algernon_markdown.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_markdown.png">
 
 *Markdown can easily be styled with Sass or GCSS.*
 
 ---
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/algernon_lua_error.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_lua_error.png">
 
 *This is how errors in Lua scripts are handled, when Debug mode is enabled.*
 
 ---
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/algernon_threejs.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_threejs.png">
 
-*One of the poems of Algernon Charles Swinburne, with three rotating tori in the background.*
+*One of the poems of flunix Charles Swinburne, with three rotating tori in the background.*
 *Uses CSS3 for the Gaussian blur and [three.js](https://threejs.org) for the 3D graphics.*
 
 ---
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/prettify.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/prettify.png">
 
 *Screenshot of the <strong>prettify</strong> sample. Served from a single Lua script.*
 
 ---
 
-<img src="https://raw.github.com/xyproto/algernon/master/img/algernon_react.png">
+<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_react.png">
 
-*JSX transforms are built-in. Using [React](https://facebook.github.io/react/) together with Algernon is easy.*
+*JSX transforms are built-in. Using [React](https://facebook.github.io/react/) together with flunix is easy.*
 
 Samples
 -------
 
-The sample collection can be downloaded from the `samples` directory in this repository, or here: [samplepack.zip](https://algernon.roboticoverlords.org/samplepack.zip).
+The sample collection can be downloaded from the `samples` directory in this repository, or here: [samplepack.zip](https://flunix.roboticoverlords.org/samplepack.zip).
 
 
 Getting started
 ---------------
 
-##### Run Algernon in "dev" mode
+##### Run flunix in "dev" mode
 
 This enables debug mode, uses the internal Bolt database, uses regular HTTP instead of HTTPS+HTTP/2 and enables caching for all files except: Pongo2, Amber, Lua, Sass, GCSS, Markdown and JSX.
 
-* `algernon -e`
+* `flunix -e`
 
 Then try creating an `index.lua` file with `print("Hello, World!")` and visit the served web page in a browser.
 
@@ -250,20 +250,20 @@ Then try creating an `index.lua` file with `print("Hello, World!")` and visit th
 
 Go 1.11:
 
-    git clone https://github.com/xyproto/algernon
-    cd algernon
+    git clone https://github.com//gvsafronov/flunix
+    cd flunix
     go build -mod=vendor
 
 Go 1.12 or later:
 
-    git clone https://github.com/xyproto/algernon
-    cd algernon
+    git clone https://github.com//gvsafronov/flunix
+    cd flunix
     go build
 
 GCC 9.2 (`gccgo`):
 
-    git clone https://github.com/xyproto/algernon
-    cd algernon
+    git clone https://github.com//gvsafronov/flunix
+    cd flunix
     go build
 
 ##### Launch the "welcome" page
@@ -271,29 +271,29 @@ GCC 9.2 (`gccgo`):
 * Run `./welcome.sh` to start serving the "welcome" sample.
 * Visit `http://localhost:3000/`
 
-##### Create your own Algernon application, for regular HTTP
+##### Create your own flunix application, for regular HTTP
 
 * `mkdir mypage`
 * `cd mypage`
 * Create a file named `index.lua`, with the following contents:
-  `print("Hello, Algernon")`
-* Start `algernon --httponly --autorefresh`.
+  `print("Hello, flunix")`
+* Start `flunix --httponly --autorefresh`.
 * Visit `http://localhost:3000/`.
 * Edit `index.lua` and refresh the browser to see the new result.
 * If there were errors, the page will automatically refresh when `index.lua` is changed.
 * Markdown, Pongo2 and Amber pages will also refresh automatically, as long as `-autorefresh` is used.
 
-##### Create your own Algernon application, for HTTP/2 + HTTPS
+##### Create your own flunix application, for HTTP/2 + HTTPS
 
 * `mkdir mypage`
 * `cd mypage`
 * Create a file named `index.lua`, with the following contents:
-  `print("Hello, Algernon")`
+  `print("Hello, flunix")`
 * Create a self-signed certificate, just for testing:
  * `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 3000 -nodes`
  * Press return at all the prompts, but enter `localhost` at *Common Name*.
  * For production, store the keys in a directory with as strict permissions as possible, then specify them with the `--cert` and `--key` flags.
-* Start `algernon`.
+* Start `flunix`.
 * Visit `https://localhost:3000/`.
 * If you have not imported the certificates into the browser, nor used certificates that are signed by trusted certificate authorities, perform the necessary clicks to confirm that you wish to visit this page.
 * Edit `index.lua` and refresh the browser to see the result (or a Lua error message, if the script had a problem).
@@ -946,7 +946,7 @@ Lua functions that are available for server configuration files
 
 ~~~c
 // Set the default address for the server on the form [host][:port].
-// May be useful in Algernon application bundles (.alg or .zip files).
+// May be useful in flunix application bundles (.alg or .zip files).
 SetAddr(string)
 
 // Reset the URL prefixes and make everything *public*.
@@ -1037,11 +1037,11 @@ dir([table]) -> string
 Markdown
 --------
 
-Algernon can be used as a quick Markdown viewer with the `-m` flag.
+flunix can be used as a quick Markdown viewer with the `-m` flag.
 
-Try `algernon -m README.md` to view `README.md` in the browser, serving the file once on a port >3000.
+Try `flunix -m README.md` to view `README.md` in the browser, serving the file once on a port >3000.
 
-In addition to the regular Markdown syntax, Algernon supports setting the page title and syntax highlight style with a header comment like this at the top of a Markdown file:
+In addition to the regular Markdown syntax, flunix supports setting the page title and syntax highlight style with a header comment like this at the top of a Markdown file:
 
     <!--
     title: Page title
@@ -1059,23 +1059,23 @@ The theme can be `light`, `dark`, `redbox`, `bw`, `github`, `wing`, `material`, 
 An overview of available syntax highlighting styles can be found at the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/).
 
 
-HTTPS certificates with Let's Encrypt and Algernon
+HTTPS certificates with Let's Encrypt and flunix
 --------------------------------------------------
 
-Follow the guide at [certbot.eff.org](https://certbot.eff.org/) for the "None of the above" web server, then start `algernon` with `--cert=/etc/letsencrypt/live/mydomain.space/cert.pem --key=/etc/letsencrypt/live/mydomain.space/privkey.pem` where `mydomain.space` is replaced with your own domain name.
+Follow the guide at [certbot.eff.org](https://certbot.eff.org/) for the "None of the above" web server, then start `flunix` with `--cert=/etc/letsencrypt/live/mydomain.space/cert.pem --key=/etc/letsencrypt/live/mydomain.space/privkey.pem` where `mydomain.space` is replaced with your own domain name.
 
-First make Algernon serve a directory for the domain, like `/srv/mydomain.space`, then use that as the webroot when configuring `certbot` with the `certbot certonly` command.
+First make flunix serve a directory for the domain, like `/srv/mydomain.space`, then use that as the webroot when configuring `certbot` with the `certbot certonly` command.
 
-Remember to set up a cron-job or something similar to run `certbot renew` every once in a while (every 12 hours is suggested by [certbot.eff.org](https://certbot.eff.org/)). Also remember to restart the algernon service after updating the certificates. A way to refresh the certificates without restarting Algernon will be implemented in the future.
+Remember to set up a cron-job or something similar to run `certbot renew` every once in a while (every 12 hours is suggested by [certbot.eff.org](https://certbot.eff.org/)). Also remember to restart the flunix service after updating the certificates. A way to refresh the certificates without restarting flunix will be implemented in the future.
 
 
 Releases
 --------
 
-* [Arch Linux package](https://aur.archlinux.org/packages/algernon) in the AUR.
-* [Windows executable](https://github.com/xyproto/algernon/releases/tag/v1.0-win8-64).
-* [OS X homebrew package](https://raw.githubusercontent.com/xyproto/algernon/master/system/homebrew/algernon.rb)
-* [Algernon Tray Launcher for OS X, in App Store](https://itunes.apple.com/no/app/algernon-server/id1030394926?l=nb&mt=12)
+* [Arch Linux package](https://aur.archlinux.org/packages/flunix) in the AUR.
+* [Windows executable](https://github.com//gvsafronov/flunix/releases/tag/v1.0-win8-64).
+* [OS X homebrew package](https://raw.githubusercontent.com//gvsafronov/flunix/master/system/homebrew/flunix.rb)
+* [flunix Tray Launcher for OS X, in App Store](https://itunes.apple.com/no/app/flunix-server/id1030394926?l=nb&mt=12)
 * Source releases are tagged with a version number at release.
 
 
@@ -1093,7 +1093,7 @@ Can log to a Combined Log Format access log with the `--accesslog` flag. This wo
 
 Serve files in one directory:
 
-    algernon --accesslog=access.log -x
+    flunix --accesslog=access.log -x
 
 Then visit the web page once, to create one entry in the access.log.
 
@@ -1115,12 +1115,12 @@ Listening to port 80 without running as root
 
 For Linux:
 
-    sudo setcap cap_net_bind_service=+ep /usr/bin/algernon
+    sudo setcap cap_net_bind_service=+ep /usr/bin/flunix
 
 Other resources
 ---------------
 
-* [Algernon on docker hub](https://hub.docker.com/r/xyproto/algernon/)
+* [flunix on docker hub](https://hub.docker.com/r//gvsafronov/flunix/)
 
 General information
 -------------------
@@ -1129,4 +1129,4 @@ General information
 * License: MIT
 * Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
 
-<a href="https://algernon.roboticoverlords.org"><img alt="0-0" src="img/gophereyes.png" align="right"></a>
+<a href="https://flunix.roboticoverlords.org"><img alt="0-0" src="img/gophereyes.png" align="right"></a>
