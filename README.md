@@ -10,8 +10,6 @@ theme: material
 </p>
 <p align="center">
 
-[![Build Status](https://travis-ci.com/xyproto/algernon.svg?branch=master)](https://travis-ci.com/xyproto/algernon) [![GoDoc](https://godoc.org/github.com/xyproto/algernon?status.svg)](https://godoc.org/github.com/xyproto/algernon) [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/xyproto/algernon/master/LICENSE) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/algernon)](https://goreportcard.com/report/github.com/xyproto/algernon) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fxyproto%2Falgernon.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fxyproto%2Falgernon?ref=badge_shield)
-
 Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38) and [Algernon](https://github.com/xyproto/algernon), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
 
 Web server with built-in support for QUIC, HTTP/2, Lua, Markdown, Pongo2, HyperApp, Amber, Sass(SCSS), GCSS, JSX, BoltDB (built-in, stores the database in a file, like SQLite), Redis, PostgreSQL, MariaDB/MySQL, rate limiting, graceful shutdown, plugins, users and permissions.
