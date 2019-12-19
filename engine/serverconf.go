@@ -251,7 +251,7 @@ func (ac *Config) DatabaseBackend() (pinterface.IPermissions, error) {
 		perm, err = bolt.NewWithConf(ac.boltFilename)
 		if err != nil {
 			if err.Error() == "timeout" {
-				tempFile, errTemp := ioutil.TempFile("", "algernon")
+				tempFile, errTemp := ioutil.TempFile("", "fluentbase")
 				if errTemp != nil {
 					log.Fatal("Unable to find a temporary file to use:", errTemp)
 				} else {
@@ -355,7 +355,7 @@ func (ac *Config) DatabaseBackend() (pinterface.IPermissions, error) {
 		perm, err = bolt.NewWithConf(ac.boltFilename)
 		if err != nil {
 			if err.Error() == "timeout" {
-				tempFile, errTemp := ioutil.TempFile("", "algernon")
+				tempFile, errTemp := ioutil.TempFile("", "fluentbase")
 				if errTemp != nil {
 					log.Fatal("Unable to find a temporary file to use:", errTemp)
 				} else {
