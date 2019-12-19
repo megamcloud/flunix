@@ -4,14 +4,14 @@
 CGO_ENABLED=0 GOOS=linux go build -v -trimpath -ldflags "-s" -a
 
 # Compress
-upx algernon || echo 'Not using upx'
+upx flunix || echo 'Not using upx'
 
 # Package
 VERSION="$(grep '* Version:' README.md | cut -d' ' -f3)"
-mkdir -p "algernon-$VERSION"
-mv -v algernon "algernon-$VERSION"
-tar zcvf "algernon-$VERSION-static_linux.tar.gz" "algernon-$VERSION"
-rm -rf "algernon-$VERSION"
+mkdir -p "flunix-$VERSION"
+mv -v flunix "flunix-$VERSION"
+tar zcvf "flunix-$VERSION-static_linux.tar.gz" "flunix-$VERSION"
+rm -rf "flunix-$VERSION"
 
 # Size
-du -h "algernon-$VERSION-static_linux.tar.gz"
+du -h "flunix-$VERSION-static_linux.tar.gz"
