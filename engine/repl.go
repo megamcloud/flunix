@@ -495,7 +495,7 @@ CookieSecret() -> string
 SetCookieSecret(string)
 
 `
-	exitMessage = "bye"
+	exitMessage = "goodbye"
 )
 
 // Export Lua functions specific to the REPL
@@ -606,7 +606,7 @@ func outputHelpAbout(o *textoutput.TextOutput, helpText, topic string) {
 		o.Println(o.DarkGray("Output help about configuration-related functions."))
 		return
 	case "quit", "exit", "shutdown", "halt":
-		o.Println(o.DarkGray("Quit Algernon."))
+		o.Println(o.DarkGray("Quit Fluentbase."))
 		return
 	}
 	comment := ""
@@ -711,9 +711,9 @@ func (ac *Config) REPL(ready, done chan bool) error {
 
 	// Command history file
 	if windows {
-		historyFilename = filepath.Join(historydir, "algernon", "repl.txt")
+		historyFilename = filepath.Join(historydir, "fluentbase", "repl.txt")
 	} else {
-		historyFilename = filepath.Join(historydir, ".algernon_history")
+		historyFilename = filepath.Join(historydir, ".fluentbase_history")
 	}
 
 	// Export a selection of functions to the Lua state
@@ -826,7 +826,7 @@ func (ac *Config) REPL(ready, done chan bool) error {
 			return nil
 		case "zalgo":
 			// Easter egg
-			o.ErrExit("Ḫ̷̲̫̰̯̭̀̂̑̈ͅĚ̥̖̩̘̱͔͈͈ͬ̚ ̦̦͖̲̀ͦ͂C̜͓̲̹͐̔ͭ̏Oͭ͛͂̋ͭͬͬ͆͏̺͓̰͚͠ͅM̢͉̼̖͍̊̕Ḛ̭̭͗̉̀̆ͬ̐ͪ̒S͉̪͂͌̄")
+			o.ErrExit("exiting...")
 		default:
 			if strings.HasPrefix(line, "help(") {
 				topic := line[5:]
