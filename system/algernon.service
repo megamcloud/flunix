@@ -1,5 +1,5 @@
 [Unit]
-Description=Algernon web server
+Description=Flunix web server
 Requires=redis.service
 After=redis.service
 #Wants=network-online.target
