@@ -10,7 +10,9 @@ theme: material
 </p>
 <p align="center">
 
-Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38) and [flunix](https://github.com/xyproto1/flunix), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
+Fluentbase is an open source (MIT licensed), in-memory geolocation data store, spatial index, and realtime geofence, distributed uder MIT LICENSE using code of [Tile-38](https://github.com/tidwall/tile38) and [flunix](https://github.com/xyproto/algernon), which also distributed uder MIT LICENSE.  It supports a variety of object types including lat/lon points, bounding boxes, XYZ tiles, Geohashes, and GeoJSON. 
+
+Flunix- is a complementary part of a fluentbase project.
 
 Web server with built-in support for QUIC, HTTP/2, Lua, Markdown, Pongo2, HyperApp, Amber, Sass(SCSS), GCSS, JSX, BoltDB (built-in, stores the database in a file, like SQLite), Redis, PostgreSQL, MariaDB/MySQL, rate limiting, graceful shutdown, plugins, users and permissions.
 
