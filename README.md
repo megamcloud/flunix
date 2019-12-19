@@ -1115,10 +1115,6 @@ For Linux:
 
     sudo setcap cap_net_bind_service=+ep /usr/bin/flunix
 
-Other resources
----------------
-
-* [flunix on docker hub](https://hub.docker.com/r//gvsafronov/flunix/)
 
 General information
 -------------------
@@ -1126,5 +1122,7 @@ General information
 * Version: 1.12.5
 * License: MIT
 * Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
+* Grigoriy Safronov & Alexandr Muraviev
 
-<a href="https://flunix.roboticoverlords.org"><img alt="0-0" src="img/gophereyes.png" align="right"></a>
+
+
