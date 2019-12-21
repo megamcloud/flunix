@@ -22,7 +22,7 @@ var (
 const (
 	dotSlash        = "." + utils.Pathsep           /* ./ */
 	doubleP         = utils.Pathsep + utils.Pathsep /* // */
-	dirconfFilename = ".algernon"
+	dirconfFilename = ".flunix"
 )
 
 // DirConfig keeps a directory listing configuration
