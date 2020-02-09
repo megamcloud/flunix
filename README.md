@@ -6,7 +6,7 @@ theme: material
 -->
 
 <p align="center">
-  <a href="https://fluentbase.org"><img src="/img/logo.png" alt="fluentbase"></a>
+  <a href="https://fluentbase.org"><img src="/img/Logo.png" alt="fluentbase"></a>
 </p>
 <p align="center">
 
