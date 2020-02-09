@@ -149,18 +149,7 @@ If needed, first:
 * Set the GOPATH. For example: `export GOPATH=~/go`
 * Add $GOPATH/bin to the path. For example: `export PATH=$PATH:$GOPATH/bin`
 
-Overview
---------
 
-Running flunix:
-
-<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_gopher.png">
-
-Screenshot of an earlier version:
-
-<img src="https://raw.github.com//gvsafronov/flunix/master/img/flunix_redis_054.png">
-
----
 
 The idea is that web pages can be written in Markdown, Pongo2, Amber, HTML or JSX (+React), depending on the need, and styled with CSS, Sass(SCSS) or GCSS, while data can be provided by a Lua script that talks to Redis, BoltDB, PostgreSQL or MariaDB/MySQL.
 
