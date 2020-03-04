@@ -1093,6 +1093,12 @@ Listening to port 80 without running as root
 For Linux:
 
     sudo setcap cap_net_bind_service=+ep /usr/bin/flunix
+    
+    
+    
+## Gratitude
+
+Alexander F. Rødseth, thank you for sharing your experience and knowledge with me.
 
 
 General information
